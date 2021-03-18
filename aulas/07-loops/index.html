@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/02-ram/">
+        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/07-loops/">
       
       
         <meta name="author" content="Igor Montagner">
@@ -19,7 +19,7 @@
     
     
       
-        <title>02 - Representação de dados em RAM - Sistemas Hardware-Software - 2021/1</title>
+        <title>07 - Loops - Sistemas Hardware-Software - 2021/1</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#02-representacao-de-dados-em-ram" class="md-skip">
+        <a href="#07-loops" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              02 - Representação de dados em RAM
+              07 - Loops
             
           </span>
         </div>
@@ -290,12 +290,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -329,67 +327,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        02 - Representação de dados em RAM
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="02 - Representação de dados em RAM" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../02-ram/" title="02 - Representação de dados em RAM" class="md-nav__link">
       02 - Representação de dados em RAM
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#experimentos" class="md-nav__link">
-    Experimentos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#representacao-de-struct-em-ram" class="md-nav__link">
-    Representação de struct em RAM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examinando-a-execucao-de-programas-usando-gdb" class="md-nav__link">
-    Examinando a execução de programas usando gdb
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -472,23 +414,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#experimentos" class="md-nav__link">
-    Experimentos
+  <a href="#arquivo-ex1o" class="md-nav__link">
+    Arquivo ex1.o
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#representacao-de-struct-em-ram" class="md-nav__link">
-    Representação de struct em RAM
+  <a href="#exercicios-para-entrega" class="md-nav__link">
+    Exercícios para entrega
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercícios para entrega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-ex2" class="md-nav__link">
+    Arquivo ex2
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#examinando-a-execucao-de-programas-usando-gdb" class="md-nav__link">
-    Examinando a execução de programas usando gdb
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-ex3" class="md-nav__link">
+    Arquivo ex3
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -504,7 +459,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/02-ram/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/07-loops/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -512,137 +467,119 @@
                   
                 
                 
-                <h1 id="02-representacao-de-dados-em-ram">02 - Representação de dados em RAM<a class="headerlink" href="#02-representacao-de-dados-em-ram" title="Permanent link">&para;</a></h1>
-<h2 id="experimentos">Experimentos<a class="headerlink" href="#experimentos" title="Permanent link">&para;</a></h2>
-<p>Vamos trabalhar com os arquivos <code>experimento0-4.c</code>. Compile e execute cada um deles e coloque suas saídas abaixo. Comente os resultados comparando os valores das constantes no código em <em>C</em> e a saída dos programas.</p>
-<div class="admonition question medium">
+                <h1 id="07-loops">07 - Loops<a class="headerlink" href="#07-loops" title="Permanent link">&para;</a></h1>
+<h2 id="arquivo-ex1o">Arquivo <code>ex1.o</code><a class="headerlink" href="#arquivo-ex1o" title="Permanent link">&para;</a></h2>
+<p>Com base no código assembly abaixo(arquivo <code>ex1.o</code>) e responda os itens.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">soma_2n</span><span class="p">:</span>
+   <span class="err">0</span><span class="nf">x066a</span> <span class="err">&lt;+</span><span class="mi">0</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">$0x1</span><span class="p">,</span><span class="nv">%eax</span>
+   <span class="err">0</span><span class="nf">x066f</span> <span class="err">&lt;+</span><span class="mi">5</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">jmp</span>    <span class="mh">0x676</span> <span class="p">&lt;</span><span class="no">soma_2n</span><span class="p">+</span><span class="mi">12</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x0671</span> <span class="err">&lt;+</span><span class="mi">7</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">shr</span>    <span class="nv">%edi</span>
+   <span class="err">0</span><span class="nf">x0673</span> <span class="err">&lt;+</span><span class="mi">9</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">add</span>    <span class="no">$0x1</span><span class="p">,</span><span class="nv">%eax</span>
+   <span class="err">0</span><span class="nf">x0676</span> <span class="err">&lt;+</span><span class="mi">12</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">cmp</span>    <span class="no">$0x1</span><span class="p">,</span><span class="nv">%edi</span>
+   <span class="err">0</span><span class="nf">x0679</span> <span class="err">&lt;+</span><span class="mi">15</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">ja</span>     <span class="mh">0x671</span> <span class="p">&lt;</span><span class="no">soma_2n</span><span class="p">+</span><span class="mi">7</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x067b</span> <span class="err">&lt;+</span><span class="mi">17</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">repz</span> <span class="no">retq</span>
+</code></pre></div>
+<div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>Examine o código <em>C</em> do arquivo <em>experimento0.c</em> e compare com o resultado de sua execução. Há algo estranho? Se sim, escreva abaixo algumas hipóteses para o comportamento do programa.</p>
+<p>Localize no código acima as instruções de saltos (<code>jmp</code> ou condicionais <code>j*</code>). Desenhe setas indicando para qual linha do código elas pulam.</p>
 </div>
-<div class="admonition question medium">
+<div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>Examine o código <em>C</em> do arquivo <em>experimento1.c</em> e compare com o resultado de sua execução. Há algo estranho? Se sim, escreva abaixo algumas hipóteses para o comportamento do programa.</p>
-</div>
-<div class="admonition question medium">
-<p class="admonition-title">Question</p>
-<p>Examine o código <em>C</em> do arquivo <em>experimento2.c</em> e compare com o resultado de sua execução. Há algo estranho? Se sim, escreva abaixo algumas hipóteses para o comportamento do programa.</p>
-</div>
-<div class="admonition question medium">
-<p class="admonition-title">Question</p>
-<p>Examine o código <em>C</em> do arquivo <em>experimento3.c</em> e compare com o resultado de sua execução. Há algo estranho? Se sim, escreva abaixo algumas hipóteses para o comportamento do programa.</p>
-</div>
-<div class="admonition question medium">
-<p class="admonition-title">Question</p>
-<p>Examine o código <em>C</em> do arquivo <em>experimento4.c</em> e compare com o resultado de sua execução. Há algo estranho? Se sim, escreva abaixo algumas hipóteses para o comportamento do programa.</p>
-</div>
-<h2 id="representacao-de-struct-em-ram">Representação de <code>struct</code> em <em>RAM</em><a class="headerlink" href="#representacao-de-struct-em-ram" title="Permanent link">&para;</a></h2>
-<p>A utilização de <code>struct</code> junta tudo que já vimos sobre representação de todos os tipos de dados na memória. Não se esqueça de levar em conta as questões de alinhamento mostradas na parte expositiva da aula.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Você <strong>não</strong> deverá abrir o código de <code>parte1.c</code>. Ele está no repositório para você poder conferir suas respostas.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Compile e execute <em>parte1.c</em>.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Os endereços mostrados na saída de <code>parte1</code> pertencem a um só struct declarado como <code>struct player one</code>. Quais são os tamanhos de cada campo?</p>
-<p><strong>Dica</strong>: pode não ser possível identificar <em>exatamente</em> o tamanho de cada campo, mas é esperado que você identifique ao menos o tamanho <strong>máximo</strong> de cada um.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>A segunda parte da saída de <code>parte1</code> mostra os endereços de cada campo do struct. Note que <code>&amp;one</code> e <code>&amp;one.icon</code> são iguais. Você consegue explicar por que? Se não, volte na aula expositiva e reveja a parte sobre <code>struct</code> e alinhamento de memória.</p>
+<p>Analise o fluxo de saltos do seu código. Existe um loop? Entre quais linhas?</p>
 </div>
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
-<p>Baseado nas respostas acima, declare abaixo o <code>struct</code>. Escreva-o da mesma maneira que usaria em um programa em <em>C</em>.</p>
+<p>Comece fazendo uma versão <em>C</em> usando somente <code>if-goto</code></p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Confira suas respostas com <em>parte1.c</em>. </p>
-</div>
-<h2 id="examinando-a-execucao-de-programas-usando-gdb">Examinando a execução de programas usando <code>gdb</code><a class="headerlink" href="#examinando-a-execucao-de-programas-usando-gdb" title="Permanent link">&para;</a></h2>
-<p>Podemos examinar um programa durante sua execução usando o <em>gdb</em>. Podemos parar em qualquer instrução do programa, examinar conteúdo de registradores e da memória e listar todos os símbolos disponíveis (que podem ser funções ou variáveis globais).</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Para compilar um programa com suporte a <em>debugging</em> usamos a flag <code>-g</code> do <code>gcc</code></p>
-<blockquote>
-<p><code>$&gt; gcc -g -Wall -pedantic exemplo1.c</code></p>
-</blockquote>
-</div>
-<p>Siga os passos abaixo para para carregar um programa usando o <em>gdb</em>.</p>
-<ol>
-<li>
-<p>Lance o <code>gdb</code> e passe para ele seu programa:</p>
-<blockquote>
-<p><code>$&gt; gdb ./exemplo1</code></p>
-</blockquote>
-</li>
-<li>
-<p>Isto nos colocará em um prompt esperando comandos. Para rodar o programa até o fim execute</p>
-<blockquote>
-<p><code>(gdb) run</code></p>
-</blockquote>
-</li>
-<li>
-<p>Para sair,</p>
-<blockquote>
-<p><code>(gdb) quit</code></p>
-</blockquote>
-</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>O <em>gdb</em> é uma ferramenta poderosa que possui muitas opções. Sua documentação está online e pode ser vista em <a href="https://sourceware.org/gdb/current/onlinedocs/gdb/index.html#Top">https://sourceware.org/gdb/current/onlinedocs/gdb/index.html#Top</a>.</p>
-</div>
-<p>Nesta primeira parte iremos abrir o arquivo <em>parte2.c</em> e olhar seu conteúdo. Também executaremos o programa compilado <em>parte2</em>.</p>
-<div class="admonition question">
+<div class="admonition question medium">
 <p class="admonition-title">Question</p>
-<p>Abra o código <em>parte2.c</em> e liste os nomes das variáveis globais declaradas e seus tamanhos. Anote também as funções declaradas.</p>
+<p>Transforme a construção que você fez acima em um código usando <code>while</code>.</p>
 </div>
-<div class="admonition question">
+<h2 id="exercicios-para-entrega">Exercícios para entrega<a class="headerlink" href="#exercicios-para-entrega" title="Permanent link">&para;</a></h2>
+<p>Vamos agora exercitar o que vimos na aula expositiva. Os exercícios abaixo estão no repositório de atividades e as perguntas no handout tem o objetivo de ajudar a compreender código cada vez mais complexos.</p>
+<h3 id="arquivo-ex2">Arquivo <code>ex2</code><a class="headerlink" href="#arquivo-ex2" title="Permanent link">&para;</a></h3>
+<p>Leia o código assembly abaixo e responda.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">soma_n</span><span class="p">:</span>
+   <span class="err">0</span><span class="nf">x066a</span> <span class="err">&lt;+</span><span class="mi">0</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">$0x0</span><span class="p">,</span><span class="nv">%edx</span>
+   <span class="err">0</span><span class="nf">x066f</span> <span class="err">&lt;+</span><span class="mi">5</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">$0x0</span><span class="p">,</span><span class="nv">%eax</span>
+   <span class="err">0</span><span class="nf">x0674</span> <span class="err">&lt;+</span><span class="mi">10</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jmp</span>    <span class="mh">0x67f</span> <span class="p">&lt;</span><span class="no">soma_n</span><span class="p">+</span><span class="mi">21</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x0676</span> <span class="err">&lt;+</span><span class="mi">12</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">movslq</span> <span class="nv">%edx</span><span class="p">,</span><span class="nv">%rcx</span>
+   <span class="err">0</span><span class="nf">x0679</span> <span class="err">&lt;+</span><span class="mi">15</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">add</span>    <span class="nv">%rcx</span><span class="p">,</span><span class="nv">%rax</span>
+   <span class="err">0</span><span class="nf">x067c</span> <span class="err">&lt;+</span><span class="mi">18</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">add</span>    <span class="no">$0x1</span><span class="p">,</span><span class="nv">%edx</span>
+   <span class="err">0</span><span class="nf">x067f</span> <span class="err">&lt;+</span><span class="mi">21</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">cmp</span>    <span class="nv">%edi</span><span class="p">,</span><span class="nv">%edx</span>
+   <span class="err">0</span><span class="nf">x0681</span> <span class="err">&lt;+</span><span class="mi">23</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jl</span>     <span class="mh">0x676</span> <span class="p">&lt;</span><span class="no">soma_n</span><span class="p">+</span><span class="mi">12</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x0683</span> <span class="err">&lt;+</span><span class="mi">25</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">repz</span> <span class="no">retq</span>
+</code></pre></div>
+<div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>O comando <em>info</em> mostra informações que podem ser obtidas a partir de um executável. Execute-o e veja o que acontece.</p>
+<p>Desenhe as flechas indicando o destino de cada instrução de pulo (<code>jmp</code> ou <code>j*</code>).</p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Use <code>info</code> para mostrar as funções e variáveis globais que existem em <code>parte2</code>.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Muitos dos nomes são estranhos. Eles fazem parte do padrão de arquivos executáveis <em>ELF</em>, que contém informações específicas do sistema operacional usado. Você não precisa se preocupar com estes nomes.</p>
-</div>
-<div class="admonition question">
+<div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>Qual é o significado da primeira coluna do comando <em>info variables</em>?</p>
-<p><strong>Dica</strong>: o valor está em hexadecimal, que usamos na expositiva para mostrar ponteiros.</p>
+<p>Escreva abaixo o cabeçalho da função <code>soma_n</code>. <strong>Dica</strong>: procure por registradores que são lidos <em>antes</em> de serem escritos.</p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Podemos usar o comando <em>print</em> para mostrar o valor inicial das variáveis globais identificadas. Mostre o valor inicial de <code>global_var</code> usando este comando e compare com o visto no arquivo <em>parte2.c</em>.</p>
-<p><strong>Dicas:</strong></p>
-<ul>
-<li>Pode não funcionar de primeira. O quê a mensagem de erro diz?</li>
-<li>A sintaxe de conversão de tipos de <em>C</em> (<em>casting</em>) pode ser útil aqui.</li>
-</ul>
+<div class="admonition question medium">
+<p class="admonition-title">Question</p>
+<p>Faça a tradução do código acima para <em>C</em> usando somente <code>if-goto</code></p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Podemos usar o <em>gdb</em> também para <strong>examinar a memória</strong> de um executável. Acesse esta <a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Memory.html">página da documentação</a>, entenda como usar o comando <code>x</code> e escreva abaixo qual o comando usado para mostrar o conteúdo do segundo item do vetor <code>global_array</code>. Em seguida, teste-o e verifique que ele funcionou corretamente.</p>
-<p><strong>Dicas</strong>:</p>
-<ol>
-<li>volte nos exercícios anteriores e encontre o endereço do início do vetor</li>
-<li>calcule o endereço do segundo elemento manualmente e passe para o comando <code>x</code></li>
-<li>não se esqueça de buscar na memória o tamanho correto do elemento</li>
-</ol>
+<div class="admonition question medium">
+<p class="admonition-title">Question</p>
+<p>Converta o código acima para uma versão legível em <em>C</em>.</p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>global_array</code> tem tipo <code>short</code>. Ou seja, é formado por dois bytes. Mostre agora o conteúdo de cada um deles. Ou seja, você deverá dar dois comandos para examinar a memória. Explique como converter esses dois bytes para o valor mostrado no exercício anterior.</p>
+<h3 id="arquivo-ex3">Arquivo <code>ex3</code><a class="headerlink" href="#arquivo-ex3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">ex3</span><span class="p">:</span>
+    <span class="err">0</span><span class="nf">x1139</span> <span class="err">&lt;+</span><span class="mi">0</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">$0x0</span><span class="p">,</span><span class="nv">%ecx</span>
+    <span class="err">0</span><span class="nf">x113e</span> <span class="err">&lt;+</span><span class="mi">5</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">$0x0</span><span class="p">,</span><span class="nv">%r8d</span>
+    <span class="err">0</span><span class="nf">x1144</span> <span class="err">&lt;+</span><span class="mi">11</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jmp</span>    <span class="mh">0x114a</span> <span class="p">&lt;</span><span class="no">ex4</span><span class="p">+</span><span class="mi">17</span><span class="p">&gt;</span>
+    <span class="err">0</span><span class="nf">x1146</span> <span class="err">&lt;+</span><span class="mi">13</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">add</span>    <span class="no">$0x1</span><span class="p">,</span><span class="nv">%rcx</span>
+    <span class="err">0</span><span class="nf">x114a</span> <span class="err">&lt;+</span><span class="mi">17</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">cmp</span>    <span class="nv">%rdi</span><span class="p">,</span><span class="nv">%rcx</span>
+    <span class="err">0</span><span class="nf">x114d</span> <span class="err">&lt;+</span><span class="mi">20</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jge</span>    <span class="mh">0x1161</span> <span class="p">&lt;</span><span class="no">ex4</span><span class="p">+</span><span class="mi">40</span><span class="p">&gt;</span>
+    <span class="err">0</span><span class="nf">x114f</span> <span class="err">&lt;+</span><span class="mi">22</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="nv">%rcx</span><span class="p">,</span><span class="nv">%rax</span>
+    <span class="err">0</span><span class="nf">x1152</span> <span class="err">&lt;+</span><span class="mi">25</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">cqto</span>
+    <span class="err">0</span><span class="nf">x1154</span> <span class="err">&lt;+</span><span class="mi">27</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">idiv</span>   <span class="nv">%rsi</span>
+    <span class="err">0</span><span class="nf">x1157</span> <span class="err">&lt;+</span><span class="mi">30</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">test</span>   <span class="nv">%rdx</span><span class="p">,</span><span class="nv">%rdx</span>
+    <span class="err">0</span><span class="nf">x115a</span> <span class="err">&lt;+</span><span class="mi">33</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jne</span>    <span class="mh">0x1146</span> <span class="p">&lt;</span><span class="no">ex4</span><span class="p">+</span><span class="mi">13</span><span class="p">&gt;</span>
+    <span class="err">0</span><span class="nf">x115c</span> <span class="err">&lt;+</span><span class="mi">35</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">add</span>    <span class="nv">%rcx</span><span class="p">,</span><span class="nv">%r8</span>
+    <span class="err">0</span><span class="nf">x115f</span> <span class="err">&lt;+</span><span class="mi">38</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jmp</span>    <span class="mh">0x1146</span> <span class="p">&lt;</span><span class="no">ex4</span><span class="p">+</span><span class="mi">13</span><span class="p">&gt;</span>
+    <span class="err">0</span><span class="nf">x1161</span> <span class="err">&lt;+</span><span class="mi">40</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="nv">%r8</span><span class="p">,</span><span class="nv">%rax</span>
+    <span class="err">0</span><span class="nf">x1164</span> <span class="err">&lt;+</span><span class="mi">43</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">retq</span>
+</code></pre></div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Quantos argumentos a função acima recebe? Quais seus tipos?</p>
+<p><strong>Dica</strong>: não se esqueça de buscar por registradores que são lidos antes de serem escritos.</p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Use agora o comando <code>x</code> para exibir <code>global_str</code> como uma <em>string</em>. Escreva o comando abaixo.</p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>A função retorna algum valor? Se sim, qual seu tipo?</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>A função acima combina loops e condicionais. Desenhe setas para onde as instruções de <code>jmp</code> apontam.</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Com base no exercício anterior, entre quais linhas o loop ocorre? E a condicional?</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>O loop acima tem uma variável contadora. Ela está em qual registrador? Qual seu tipo?</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Revise o funcionamento da instrução <code>idiv</code>. Em qual registrador é armazenado o resultado da divisão? E o resto?</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Qual a condição testada na condicional?</p>
+</div>
+<div class="admonition question long">
+<p class="admonition-title">Question</p>
+<p>Escreva uma versão do código acima usando somente <code>if-goto</code>.</p>
+</div>
+<div class="admonition question long">
+<p class="admonition-title">Question</p>
+<p>Escreva uma versão legível do código acima.</p>
 </div>
                 
               
@@ -658,41 +595,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../01-inteiros/" title="01 - Inteiros na CPU" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                01 - Inteiros na CPU
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../03-arquitetura-x86/" title="03 - Arquitetura x86-64" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                03 - Arquitetura x86-64
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
