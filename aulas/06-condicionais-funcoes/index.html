@@ -488,6 +488,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07-loops/" title="07 - Loops" class="md-nav__link">
+      07 - Loops
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -610,6 +622,7 @@
 <p>Na aula de hoje vamos revisar e praticar os conceitos de funções e condicionais em Assembly. Teremos exercícios simples de cada assunto e no fim alguns exercícios para entrega que juntam coisas diferentes.</p>
 <h2 id="funcoes-e-aritmetica-com-lea">Funções e aritmética com <code>LEA</code><a class="headerlink" href="#funcoes-e-aritmetica-com-lea" title="Permanent link">&para;</a></h2>
 <p>Todos os exercícios da revisão serão feitos com o arquivo <code>exemplo1</code> (compilado a partir de <code>exemplo1.c</code>). Vamos examinar tanto a função <code>main</code> quanto a função <code>exemplo1</code>.</p>
+<hr />
 <h3 id="chamadas-de-funcoes">Chamadas de funções<a class="headerlink" href="#chamadas-de-funcoes" title="Permanent link">&para;</a></h3>
 <p>As chamadas de função são feitas usando a seguinte ordem para os argumentos inteiros:</p>
 <ol>
@@ -642,11 +655,14 @@
 <p>A ordem dos parâmetros segue é sempre a mesma vista na <a href="/aulas/04-funcoes-mov">aula 04</a>. Mesmo que as instruções estejam em ordem diferente, <code>%edi</code> (ou uma de suas partes) é sempre o primeiro parâmetro.</p>
 </div>
 </div>
+<hr />
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>A instrução <code>call</code> realiza chamadas de função. Traduza a chamada de função acima para <em>C</em>.</p>
-<details class="details"><summary>Resposta</summary><p><code>exemplo1(1, 2, 3, 4, 5, 6)</code></p>
-</details>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p><code>exemplo1(1, 2, 3, 4, 5, 6)</code></p>
+</div>
 </div>
 <p>Vamos agora analisar o código de <code>exemplo1</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">exemplo1</span><span class="p">:</span>
@@ -667,6 +683,7 @@
 <details class="details"><summary>Resposta</summary><p><code>int exemplo1(int a, int b, int c, int d, int e, int f);</code></p>
 </details>
 </div>
+<hr />
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
 <p>O que faz o conjunto de instruções <code>add</code> nas linhas <code>+0</code> até <code>+6</code>? Escreva uma expressão em <em>C</em> equivalente.</p>
@@ -676,11 +693,13 @@
 <p>Vemos na linha <code>exemplo1+9</code> que colocamos um valor no registrador <code>%eax</code> e depois finalizamos a função usando <code>retq</code>. Este é o segundo ponto que nunca muda: <strong>o valor de retorno de toda função é colocado no registrador <code>%rax</code></strong> (ou uma de suas partes menores). A instrução usada é o <code>LEA</code> que veremos na seção a seguir.</p>
 <h3 id="operacoes-aritmeticas-usando-lea">Operações aritméticas usando <code>LEA</code><a class="headerlink" href="#operacoes-aritmeticas-usando-lea" title="Permanent link">&para;</a></h3>
 <p>Se usada de maneira literal, a instrução LEA (**L**oad **E**ffective **A**ddress) serve para calcular o endereço de uma variável local e é equivalente ao operador <code>&amp;</code> em <em>C</em>. Porém, ela é frequentemente "abusada" para fazer aritmética. Um ponto importante quando usamos <code>LEA</code> é que todos os operandos são registradores de <code>64</code> bits.</p>
-<p>!!! tip "Regra geral":</p>
-<div class="codehilite"><pre><span></span><code>1. Se `LEA` for usada com o registrador `%rsp` então ela sempre representa o operador `&amp;`
-1. Se os registradores envolvidos foram usados como números inteiros em instruções anteriores, então ela representa uma conta com os valores dos registradores.
-</code></pre></div>
-
+<div class="admonition tip">
+<p class="admonition-title">Regra geral</p>
+<ol>
+<li>Se <code>LEA</code> for usada com o registrador <code>%rsp</code> então ela sempre representa o operador <code>&amp;</code></li>
+<li>Se os registradores envolvidos foram usados como números inteiros em instruções anteriores, então ela representa uma conta com os valores dos registradores.</li>
+</ol>
+</div>
 <p>Vejamos o exemplo da função <code>exemplo1</code> acima:</p>
 <div class="highlight"><pre><span></span><code>   <span class="err">0</span><span class="nf">x0653</span> <span class="err">&lt;+</span><span class="mi">9</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">lea</span>    <span class="p">(</span><span class="nv">%rcx</span><span class="p">,</span><span class="nv">%r9</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="nv">%eax</span>
 </code></pre></div>
@@ -891,6 +910,20 @@ A linha de baixo realiza uma operação aritmética com <code>%rax</code>.</p>
           </a>
         
         
+          <a href="../07-loops/" title="07 - Loops" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                07 - Loops
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
       </nav>
     </div>
   
@@ -925,9 +958,9 @@ A linha de baixo realiza uma operação aritmética com <code>%rax</code>.</p>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
       
-        <script src="../../translate-admonitions.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
-        <script src="../../quiz.js"></script>
+        <script src="../../markdown-enhancer.js"></script>
       
     
   </body>

@@ -290,10 +290,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -380,6 +382,87 @@
     <a href="../06-condicionais-funcoes/" title="06 - Condicionais e funções" class="md-nav__link">
       06 - Condicionais e funções
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        07 - Loops
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="07 - Loops" class="md-nav__link md-nav__link--active">
+      07 - Loops
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arquivo-ex1o" class="md-nav__link">
+    Arquivo ex1.o
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicios-para-entrega" class="md-nav__link">
+    Exercícios para entrega
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercícios para entrega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-ex2" class="md-nav__link">
+    Arquivo ex2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-ex3" class="md-nav__link">
+    Arquivo ex3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -486,6 +569,32 @@
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Analise o fluxo de saltos do seu código. Existe um loop? Entre quais linhas?</p>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>O loop ocorre entre as linhas <code>+5</code> e <code>+15</code>. </p>
+</div>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>Qual é a condição do loop acima? Ou seja, qual condição precisa ser verdade para que o loop <strong>continue rodando</strong>?</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>%edi &gt; 1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>%edi &lt; 1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>%edi &gt; 0</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>%eax &gt; 1</code></li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Sempre comparamos o segundo em relação ao primeiro. Logo, fazemos <code>%edi &gt; 1</code>. A instrução <code>ja</code> representa a comparação <strong>jump above</strong>, que é uma comparação de <code>&gt;</code> feita entre variáveis <code>unsigned</code></p>
+</div>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Com base na sua resposta acima, como você escreveria esse loop como um <code>while</code>?</p>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Considerando que o primeiro argumento da função se chama <code>int arg1</code>, seria <code>while(arg1 &gt; 1)</code>.</p>
+</div>
 </div>
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
@@ -495,6 +604,7 @@
 <p class="admonition-title">Question</p>
 <p>Transforme a construção que você fez acima em um código usando <code>while</code>.</p>
 </div>
+<hr />
 <h2 id="exercicios-para-entrega">Exercícios para entrega<a class="headerlink" href="#exercicios-para-entrega" title="Permanent link">&para;</a></h2>
 <p>Vamos agora exercitar o que vimos na aula expositiva. Os exercícios abaixo estão no repositório de atividades e as perguntas no handout tem o objetivo de ajudar a compreender código cada vez mais complexos.</p>
 <h3 id="arquivo-ex2">Arquivo <code>ex2</code><a class="headerlink" href="#arquivo-ex2" title="Permanent link">&para;</a></h3>
@@ -596,6 +706,27 @@
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../06-condicionais-funcoes/" title="06 - Condicionais e funções" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                06 - Condicionais e funções
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -627,9 +758,9 @@
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
       
-        <script src="../../translate-admonitions.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
-        <script src="../../quiz.js"></script>
+        <script src="../../markdown-enhancer.js"></script>
       
     
   </body>
