@@ -622,7 +622,6 @@
 <p>Na aula de hoje vamos revisar e praticar os conceitos de funções e condicionais em Assembly. Teremos exercícios simples de cada assunto e no fim alguns exercícios para entrega que juntam coisas diferentes.</p>
 <h2 id="funcoes-e-aritmetica-com-lea">Funções e aritmética com <code>LEA</code><a class="headerlink" href="#funcoes-e-aritmetica-com-lea" title="Permanent link">&para;</a></h2>
 <p>Todos os exercícios da revisão serão feitos com o arquivo <code>exemplo1</code> (compilado a partir de <code>exemplo1.c</code>). Vamos examinar tanto a função <code>main</code> quanto a função <code>exemplo1</code>.</p>
-<hr />
 <h3 id="chamadas-de-funcoes">Chamadas de funções<a class="headerlink" href="#chamadas-de-funcoes" title="Permanent link">&para;</a></h3>
 <p>As chamadas de função são feitas usando a seguinte ordem para os argumentos inteiros:</p>
 <ol>
@@ -655,14 +654,11 @@
 <p>A ordem dos parâmetros segue é sempre a mesma vista na <a href="/aulas/04-funcoes-mov">aula 04</a>. Mesmo que as instruções estejam em ordem diferente, <code>%edi</code> (ou uma de suas partes) é sempre o primeiro parâmetro.</p>
 </div>
 </div>
-<hr />
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>A instrução <code>call</code> realiza chamadas de função. Traduza a chamada de função acima para <em>C</em>.</p>
-<div class="admonition details">
-<p class="admonition-title">Resposta</p>
-<p><code>exemplo1(1, 2, 3, 4, 5, 6)</code></p>
-</div>
+<details class="details"><summary>Resposta</summary><p><code>exemplo1(1, 2, 3, 4, 5, 6)</code></p>
+</details>
 </div>
 <p>Vamos agora analisar o código de <code>exemplo1</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">exemplo1</span><span class="p">:</span>
@@ -683,7 +679,6 @@
 <details class="details"><summary>Resposta</summary><p><code>int exemplo1(int a, int b, int c, int d, int e, int f);</code></p>
 </details>
 </div>
-<hr />
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
 <p>O que faz o conjunto de instruções <code>add</code> nas linhas <code>+0</code> até <code>+6</code>? Escreva uma expressão em <em>C</em> equivalente.</p>
