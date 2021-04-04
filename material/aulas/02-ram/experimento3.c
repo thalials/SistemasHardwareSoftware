@@ -12,7 +12,7 @@ int main() {
     char *string = "Oi C :)";
     
     printf("Valor guardado o array : ");
-    show_bytes((unsigned char *) string, strlen(string) + 1);
+    show_bytes((unsigned char *) string, strlen(string)+1);
     
     return 0;
 }

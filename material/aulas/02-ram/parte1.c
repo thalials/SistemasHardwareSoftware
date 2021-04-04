@@ -14,7 +14,6 @@ struct player one = {
     1012312312
 };
 
-
 int main(int argc, char *argv[]) {
     printf("Sizeof(struct player) = %lu\n", sizeof(struct player));
     printf("--------\nname: %s\nlevel: %ld\nicon: %d\nscore: %ld\n", one.name,
