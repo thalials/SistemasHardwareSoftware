@@ -15,7 +15,7 @@ long ex5(long rdi, long rsi) {
     char al = rsi <= 0;
     long rax;
 
-    if (dl & al <= 0) goto if1;
+    if (dl & al != 0) goto if1;
     rax = rsi - 2;
     return rax;
 
@@ -27,10 +27,12 @@ long ex5(long rdi, long rsi) {
 // quais as expressoes booleanas testadas? and ... ?
 // legivel em C
 long ex5(long rdi, long rsi) {
-    char dl = rdi > 0;
-    char al = rsi <= 0;
+    // consertar essa funcao
+    
+    // char dl = rdi > 0;
+    // char al = rsi <= 0;
     long rax;
-    if (dl & al <= 0) {
+    if (rdi > 0 && rsi <= 0) {
         return rsi - 2;
     } else {
         return 5 + rdi;
