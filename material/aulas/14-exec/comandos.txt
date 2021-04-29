@@ -1,0 +1,7 @@
+comandos interessantes:
+
+>>> man <funcao> : retorna a documentacao da funcao
+ex: man atof
+
+>>> gcc -Wall arquivo.c -o arquivo 
+
