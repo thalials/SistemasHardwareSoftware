@@ -1,0 +1,7 @@
+criar um arquivo vazio usando dd:
+>>> dd if=/dev/zero of=raiz.img bs=1M count=100
+
+
+para expor o arquivo como um dispositivo de armazenamento para o restante do sistem:
+>>> sudo losetup -P -f --show raiz.img
+

@@ -5,3 +5,6 @@ ex: man atof
 
 >>> gcc -Wall arquivo.c -o arquivo 
 
+# a chamada exec é usada para carregar programas na memória e executá-las
+exemplo:  execvp(prog, args);
+
