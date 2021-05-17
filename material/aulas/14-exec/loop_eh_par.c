@@ -9,8 +9,8 @@ int main() {
     do {
         scanf("%d", &num);
 
-        // FAZ O FORK 
-        // NO FILHO EXEC
+    // FAZ O FORK 
+    // NO FILHO EXEC
     if (fork() == 0) {
         char *args[] = {"./eh_par", "", NULL};
         char int_to_str[20];
