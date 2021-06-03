@@ -19,7 +19,7 @@ int main (int argc, char *argv[]) {
     do {
         bytes_read = read(source, &buf, 1);
         if (bytes_read > 0) write(dest, &buf, 1);
-    } while (bytes_read != 0);
+    } while (bytes_read > 0);
 
     // fechar os arquivos
     close(source);
