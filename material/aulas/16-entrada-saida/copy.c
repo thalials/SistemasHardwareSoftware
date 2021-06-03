@@ -12,6 +12,7 @@ int main (int argc, char *argv[]) {
     // somente leitua
     source = open(argv[1], O_RDONLY);
     // para escrita
+    // o ultimo parametro é pra permissão -> 0700
     dest = open(argv[2], O_WRONLY | O_CREAT, 0700);
 
     int bytes_read = 1;
