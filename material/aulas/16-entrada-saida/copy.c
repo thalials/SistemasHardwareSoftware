@@ -5,6 +5,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+// programa feito pelo igor em aula 
+
 int main (int argc, char *argv[]) {
     int source, dest;
     char buf;
