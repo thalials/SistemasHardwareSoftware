@@ -7,6 +7,7 @@ int main() {
     int variavel = 5;
 
     filho = fork();
+    // printf("filho: %d\n", filho);
     if (filho == 0) {
         // processo filho aqui
         pai = getppid();
