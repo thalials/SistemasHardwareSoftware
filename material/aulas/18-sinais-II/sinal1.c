@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
-#include <stdlib.h>
+#include <stdlib.h> // exit
 
 int num_ctrl_c = 0;
 
 void sig_handler(int num) {
     printf("Chamou Ctrl+C\n");
     num_ctrl_c++;
-    // if(num_ctrl_c > 2) exit(1);
-    if (num_ctrl_c > 2) {
+    // saindo com exit(0) o processo pai não consegue saber
+    // se o programa foi interrompido pelo usuário:
+    // if(num_ctrl_c == 3) exit(1);
+    if (num_ctrl_c == 2) {
         struct sigaction handler_sigint_dfl;
         handler_sigint_dfl.sa_handler = SIG_DFL;
         sigemptyset(&handler_sigint_dfl.sa_mask);
         handler_sigint_dfl.sa_flags = 0;
-
         sigaction(SIGINT, &handler_sigint_dfl, NULL);
-          
     }
 }
 
