@@ -6,10 +6,11 @@ int main() {
     pid_t filho;
 
     filho = fork();
+    printf("pid: %d\n", filho);
     if (filho == 0) {
-        int i = 1/0;
-        printf("Divisão por zero!\n");
-        sleep(2);
+        printf("[filho] pid = %d\n", getpid());
+        // sleep(2);
+        while(1);
     }
     else {
         int wst;

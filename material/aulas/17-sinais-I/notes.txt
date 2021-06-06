@@ -1,0 +1,7 @@
+comando kill:
+$ kill SIGKILL [pid do processo]
+
+para ver a lista de sinais disponiveis:
+$ kill -l
+ou 
+$ man 7 signal
