@@ -2,78 +2,19 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int main(){
-	int pid1, pid2, pid3, pid4, pid5, pid6, pid7, pid8;
+int main() {
+    pid_t lista_pid[8];
 
-	pid1 = fork();
-	if (pid1 == 0) {
-    	sleep(3);
-		printf("child[1] --> pid = %d and ppid = %d\n", getpid(), getppid());
-	}
+    for (int i = 0; i < 8; i++) {
+        lista_pid[i] = fork();
 
-	else {
-		pid2 = fork();
-		if (pid2 == 0) {
-			sleep(2);
-			printf("child[2] --> pid = %d and ppid = %d\n", getpid(), getppid());
-		}
-
-		else {
-			pid3 = fork();
-			if (pid3 == 0) {
-			    sleep(2);
-				printf("child[3] --> pid = %d and ppid = %d\n", getpid(), getppid());
-			} 
-
-            else {
-                pid4 = fork();
-                if (pid4 == 0) {
-			        sleep(2);
-                    printf("child[4] --> pid = %d and ppid = %d\n", getpid(), getppid());
-                } 
-                
-                else {
-                    pid5 = fork();
-                    if (pid5 == 0) {
-			            sleep(2);
-                        printf("child[5] --> pid = %d and ppid = %d\n", getpid(), getppid());
-                    } 
-
-                    else {
-                        pid6 = fork();
-                        if (pid6 == 0) {
-                            sleep(2);
-                            printf("child[6] --> pid = %d and ppid = %d\n", getpid(), getppid());
-                        } 
-
-                        else {
-                            pid7 = fork();
-                            if (pid7 == 0) {
-                                sleep(2);
-                                printf("child[7] --> pid = %d and ppid = %d\n", getpid(), getppid());
-                            } 
-                    
-                            else {
-                                pid8 = fork();
-                                if (pid8 == 0) {
-                                    sleep(2);
-                                    printf("child[8] --> pid = %d and ppid = %d\n", getpid(), getppid());
-                                } 
-                        
-                                else {
-                                    // This is asked to be printed at last
-                                    // hence made to sleep for 3 seconds.
-                                    sleep(3);
-                                    printf("parent[0] --> pid = %d\n", getpid());
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-		}
-	}
-
-	return 0;
+        // analise do processo filho (ps: o processo pai continua rodando)
+        if (lista_pid[i] == 0) {
+            printf("[filho] meu pid é %d, meu id é %d, pid do pai = %d\n", getpid(), i+1, getppid());
+            // da um fim na vida do processo filho aqui
+            return 0;
+        }
+    }
+    printf("[pai] meu pid é %d e meu id é %d\n", getpid(), 0);
+    return 0;
 }
