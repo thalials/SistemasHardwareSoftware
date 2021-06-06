@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <sys/wait.h>
 int main() {
     pid_t lista_pid[8];
 
@@ -14,7 +14,9 @@ int main() {
             // da um fim na vida do processo filho aqui
             return 0;
         }
+        int wstatus;
+    	wait(&wstatus);
     }
-    printf("[pai] meu pid é %d e meu id é %d\n", getpid(), 0);
+    printf("[pai]  meu pid é %d e meu id é %d\n", getpid(), 0);
     return 0;
 }
