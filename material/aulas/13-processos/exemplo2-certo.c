@@ -9,11 +9,11 @@ int main() {
     pid_t filho;
 
     filho = fork();
-    printf("filho-> %d\n", filho);
+
     if (filho == 0) {
         // processo filho
-        printf("Acabei filho\n");
-        sleep(3);
+        printf("processo filho\n");
+        sleep(2);
         return 3;
 
     } else {
