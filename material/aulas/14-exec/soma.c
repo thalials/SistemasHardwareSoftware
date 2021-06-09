@@ -6,7 +6,7 @@ int main( int argc, char *argv[]) {
         printf("Erro!\n");
         return -1;
     }
-
+    // atof -> retorna um valor convertido 
     double num1 = atof(argv[1]);
     double num2 = atof(argv[2]);
     printf("%lf\n", num1+num2);

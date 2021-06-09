@@ -14,7 +14,7 @@ int main() {
         // processo filho
         printf("processo filho\n");
         sleep(2);
-        return 3;
+        return 2;
 
     } else {
         // processo pai 

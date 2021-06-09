@@ -9,6 +9,11 @@ void *minha_thread(void *arg) {
     return NULL;
 }
 
+void *tarefa_print_i(void *arg) {
+    int *i = (int *) arg;
+    printf("%d\n", *i);
+}
+
 pthread_t *criar_threads(int n) {
     pthread_t *tids = malloc(sizeof(pthread_t) * n);
 

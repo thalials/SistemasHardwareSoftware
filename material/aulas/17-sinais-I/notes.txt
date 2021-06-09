@@ -1,7 +1,16 @@
-comando kill:
+### comando kill:
 $ kill SIGKILL [pid do processo]
 
-para ver a lista de sinais disponiveis:
+### para ver a lista de sinais disponiveis:
 $ kill -l
 ou 
 $ man 7 signal
+
+### sobre o método wait():
+pid_t mait(int *status);
+
+### sobre o método waitpid():
+pid_t waitpid(pid_t pid, int *status, int options);
+
+exemplo para options: options  WNOHANG
+WNOHANG -> retorna imediatamente se nenhum filho tiver termidado.
